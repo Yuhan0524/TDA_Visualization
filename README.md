@@ -1,7 +1,10 @@
 # TDA_Visualization
 a website to visualize the data needed for 'Facial Emotion Recognition depends on TDA'
 
+中文注释：
+
 本库是运用html、css、JavaScript基于echarts生成的动态可视化平台，生成数据为基于TDA的人脸表情识别所获得的数据
+
 
 使用方法：
 
@@ -45,3 +48,55 @@ c.
 
 前端代码：
 
+visualization2.html为主html文件
+
+排版基于index.css
+
+（都很基础，是PO主速成的哈哈哈
+
+动态部分由html文件中的几个函数实现
+
+以右上部分为例
+
+function testSubmit(){  
+
+  console.log(document.getElementById('mds').checked);
+  
+  console.log(document.getElementById('tsne').checked);
+  
+  console.log(document.getElementById('select').value);
+  
+  chooseimg_face()
+  
+ }
+ 
+通过document.getElementById('id').checked获取radio的值，document.getElementById('id').value获取下拉表单的值，并用console.log()输出在控制台处，并在submit处调用本函数
+
+在获得输入数据之后，可以根据需求通过if else等方式，根据不同的条件调用对应的echarts javascript文档
+
+
+function chooseimg_face(){
+
+  var x=document.getElementById('select').value;
+  
+  var y=document.getElementById('mds').checked;
+  
+  var z=document.getElementById('tsne').checked;
+  
+  if(y==true){
+  
+  if(x==1){
+    
+  displayChart1()
+    
+  }else if(x==2){
+    
+  displayChart2()
+      
+  }
+      
+  }
+  
+函数displayChart1()即对应了echarts所生成的第一幅图javascript文档中的函数，同理displayChart2()则是第二幅图的对应函数
+
+注意，此时要把chooseimg_face()函数放到testSubmit()中进行调用
