@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  position: relative;
+  height: 1rem;
+  background: url(../head.png) no-repeat;
+  background-size: 100% 100%;
+}
+header h1 {
+  font-size: 0.7018rem;
+  color: #fff;
+  line-height: 1rem;
+}
+header h2 {
+  position: absolute;
+  right: 0.2632rem;
+  top: 0;
+  line-height: 1.4737rem;
+  color: #050A30;
+  font-size: 0.2632rem;
+}
+.mainbox {
+  display: flex;
+  min-width: 1024px;
+  max-width: 2736px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 0.0877rem 0.0877rem 0;
+}
+.mainbox .column {
+  flex: 1;
+}
+.mainbox .column:nth-child(1) {
+  flex: 0.618;
+}
+.mainbox .column:nth-child(1) {
+  margin: 0.0877rem 0.0877rem 0;
+}
+.mainbox .panel {
+  position: relative;
+  display: flex;
+  height: 6.1404rem;
+  padding: 0 0.1316rem 0.3509rem;
+  border: 1px solid #050A30;
+  margin-bottom: 0.1316rem;
+}
+.mainbox .panel .column {
+  flex: 5;
+}
+.mainbox .panel .column:nth-child(1) {
+  flex: 1;
+}
+.mainbox .panel h3 {
+  height: 0.5rem;
+  color: #050A30;
+  line-height: 0.4211rem;
+  text-align: center;
+  font-size: 0.3947rem;
+  font-weight: 400;
+}
+.mainbox .panel .chart {
+  height: 5.6rem;
+  width: 13rem;
+  background-color: #fff;
+}
+.mainbox .facial_information {
+  position: relative;
+  display: flex;
+  height: 6.1404rem;
+  padding: 0 0.1316rem 0.3509rem;
+  border: 1px solid #050A30;
+  margin-bottom: 0.1316rem;
+}
+.mainbox .facial_information .column {
+  flex: 5;
+}
+.mainbox .facial_information .column:nth-child(1) {
+  flex: 1;
+}
+.mainbox .facial_information h3 {
+  height: 0.5rem;
+  color: #050A30;
+  line-height: 0.4211rem;
+  text-align: center;
+  font-size: 0.3947rem;
+  font-weight: 400;
+}
+.mainbox .facial_information .chart {
+  height: 5.6rem;
+  width: 13rem;
+  background-color: #fff;
+}
+.mainbox .choice {
+  padding: 0rem;
+  background-color: #fff;
+}
+.mainbox .face {
+  height: 5.4rem;
+}
+.mainbox .face .chart {
+  height: 6rem;
+  width: 7rem;
+  padding-left: 0;
+}
+.mainbox .diagram {
+  height: 6.1404rem;
+  margin-bottom: 0.1316rem;
+}
+.mainbox .diagram .chart_face {
+  height: 5.5rem;
+  background: url(../blank.png) no-repeat;
+  background-size: 95% 95%;
+}

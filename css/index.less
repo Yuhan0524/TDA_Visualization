@@ -1,0 +1,130 @@
+//css 初始化
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+header{
+    position: relative;
+    height: 1rem;
+    background:url(../head.png)
+    no-repeat;
+    background-size: 100% 100%;
+
+    h1{
+        font-size: .7018rem;
+        color: #fff;
+        line-height: 1rem;
+    }
+    h2{
+        position:absolute;
+        right:0.2632rem;
+        top: 0;
+        line-height: 1.4737rem;
+        color:#050A30;
+        font-size: .2632rem;
+    }
+}
+
+//页面主体盒子
+.mainbox{
+    display: flex;
+    min-width: 1024px;
+    max-width: 2736px;
+    margin: 0 auto;
+    background-color: white;
+    padding: .0877rem .0877rem 0;
+    .column{
+        flex:1;
+        &:nth-child(1) {
+            flex: 0.618;
+        }
+    }
+    .column:nth-child(1){
+        margin: .0877rem .0877rem 0
+    }
+    .panel{
+        position: relative;
+        display: flex;
+        height:6.1404rem;
+        padding: 0 .1316rem .3509rem;
+        border: 1px solid #050A30;
+        margin-bottom: .1316rem;
+        .column{
+            flex:5;
+            &:nth-child(1) {
+                flex: 1;
+            }
+        }
+        h3{
+            height:.5rem;
+            color: #050A30;
+            line-height:.4211rem;
+            text-align: center;
+            font-size:.3947rem;
+            font-weight:400;
+        }
+        .chart{
+            height: 5.6rem;
+            width:13rem;
+            background-color: #fff;
+        }
+        
+    }
+    .facial_information{
+        position: relative;
+        display: flex;
+        height:6.1404rem;
+        padding: 0 .1316rem .3509rem;
+        border: 1px solid #050A30;
+        margin-bottom: .1316rem;
+        .column{
+            flex:5;
+            &:nth-child(1) {
+                flex: 1;
+            }
+        }
+        h3{
+            height:.5rem;
+            color: #050A30;
+            line-height:.4211rem;
+            text-align: center;
+            font-size:.3947rem;
+            font-weight:400;
+        }
+        .chart{
+            height: 5.6rem;
+            width:13rem;
+            background-color: #fff;
+        }
+    }
+    .choice{
+        padding:0rem;
+        background-color: #fff;
+    }
+    .face{
+        height:5.4rem;
+        .chart{
+            height: 6rem;
+            width: 7rem;
+            padding-left:0;
+        }
+    }
+    .diagram{
+        height:6.1404rem;
+        margin-bottom: .1316rem;
+        //h5{
+            //height:.4211rem;
+            //color: #050A30;
+            //line-height:.4211rem;
+            //text-align: center;
+            //font-size:.3947rem;
+            //font-weight:400;}
+        .chart_face{
+            height: 5.5rem;
+            background:url(../blank.png)
+            no-repeat;
+            background-size: 95% 95%;
+        }
+    }
+}

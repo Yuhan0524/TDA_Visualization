@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewpoiny" content="width-device-width, initial-scale=1.0"/>
+        <title> VISUALIZATION</title>
+        <link rel="stylesheet" href="css\index.css" />  
+        
+    </head>
+    <body>
+        <div class="box"></div>
+        <!--头部的盒子-->
+        <header>
+            <h1>
+                <p align="left">TDA Visualization</p>
+            </h1>
+            <h2>Peng Yuhan  6/2022</h2>
+        </header>
+
+        <!--页面主体盒子-->
+        <section class="mainbox">
+
+            <div class="column">
+                <!--选择模块-->
+                <div class="choice">
+                    <script>
+			
+                        // 获取元素内容
+                        function testSubmit2(){
+                            console.log(document.getElementById('PD').checked);
+                            console.log(document.getElementById('PB0').checked);
+                            console.log(document.getElementById('PB1').checked);
+                            console.log(document.getElementById('select2').value);
+                            showing_face_diagram()
+                        }
+                        function showing_face_diagram(){
+                                console.log('HI')
+                                var x=document.getElementById('PD').checked;
+                                var y=document.getElementById('PB0').checked;
+                                var z=document.getElementById('PB1').checked;
+                                var w=document.getElementById('select2').value;
+                                if(x==true){
+                                    displayDgm1()
+                                    if(w==1){
+                                        console.log('hi2')
+                                        displayFace1()
+                                    }else if(w==2){
+                                        displayFace2()
+                                    }else if(w==3){
+                                        displayFace3()
+                                    }else if(w==4){
+                                        displayFace4()
+                                    }else if(w==5){
+                                        displayFace5()
+                                    }else if(w==6){
+                                        displayFace6()
+                                    }else if(w==7){
+                                        displayFace7()
+                                    }
+                                }else if(y==true){
+                                    displayDgm2()
+                                    if(w==1){
+                                        console.log('hi2')
+                                        displayFace1()
+                                    }else if(w==2){
+                                        displayFace2()
+                                    }else if(w==3){
+                                        displayFace3()
+                                    }else if(w==4){
+                                        displayFace4()
+                                    }else if(w==5){
+                                        displayFace5()
+                                    }else if(w==6){
+                                        displayFace6()
+                                    }else if(w==7){
+                                        displayFace7()
+                                    }
+                                }else if(z==true){
+                                    displayDgm3()
+                                    if(w==1){
+                                        console.log('hi2')
+                                        displayFace1()
+                                    }else if(w==2){
+                                        displayFace2()
+                                    }else if(w==3){
+                                        displayFace3()
+                                    }else if(w==4){
+                                        displayFace4()
+                                    }else if(w==5){
+                                        displayFace5()
+                                    }else if(w==6){
+                                        displayFace6()
+                                    }else if(w==7){
+                                        displayFace7()
+                                    }
+                                }
+                                
+                            }
+
+                    </script>
+                    
+                    <form id="myform">
+                        <font size="2">
+                            Type:
+                            <input type='radio' name="face_type" value="PD"  checked="checked" id="PD"><label for="PD"> Persistent Diagram</label>
+                            <input type='radio' name="face_type" value="PB0"  id="PB0"> <label for="PB0">Persistent Barcode H0</label>
+                            <input type='radio' name="face_type" value="PB0"  id="PB1"> <label for="PB1">Persistent Barcode H1</label><br/>
+                            
+                            Data:
+                            <select id="select2" name="data" >
+                                <option selected="selected"  value="1">Angry</option>
+                                <option value="2">Disgust</option>
+                                <option value="3">Fear</option>
+                                <option value="4">Happy</option>
+                                <option value="5">Neutral</option>
+                                <option value="6">Sad</option>
+                                <option value="7">Surprise</option>
+                            </select>
+                        </font>
+                    </form>
+                    <button onClick=testSubmit2()>Submit</button>
+
+                </div>
+                <div class="face">
+                    <div class="chart"></div>
+                    <div class="panel-footer"></div>
+                </div>
+                <div class="diagram">
+                    <div class="chart_face" id="face">
+                           <li hidden><img src='js/js/face_1.png'></li>
+                           <li hidden><img src='js/js/face_2.png'></li>
+                           <li hidden><img src='js/js/face_3.png'></li>
+                           <li hidden><img src='js/js/face_4.png'></li>
+                           <li hidden><img src='js/js/face_5.png'></li>
+                           <li hidden><img src='js/js/face_6.png'></li>
+                           <li hidden><img src='js/js/face_7.png'></li>
+                    </div>
+                    <div class="chart_face1" id="face">    
+
+                           <li hidden><img src='js/js/faceph0_1.png'></li>
+                           <li hidden><img src='js/js/faceph0_2.png'></li>
+                           <li hidden><img src='js/js/faceph0_3.png'></li>
+                           <li hidden><img src='js/js/faceph0_4.png'></li>
+                           <li hidden><img src='js/js/faceph0_5.png'></li>
+                           <li hidden><img src='js/js/faceph0_6.png'></li>
+                           <li hidden><img src='js/js/faceph0_7.png'></li>
+                    </div>
+                    <div class="chart_face2" id="face">   
+                           <li hidden><img src='js/js/faceph1_1.png'></li>
+                           <li hidden><img src='js/js/faceph1_2.png'></li>
+                           <li hidden><img src='js/js/faceph1_3.png'></li>
+                           <li hidden><img src='js/js/faceph1_4.png'></li>
+                           <li hidden><img src='js/js/faceph1_5.png'></li>
+                           <li hidden><img src='js/js/faceph1_6.png'></li>
+                           <li hidden><img src='js/js/faceph1_7.png'></li>
+                    </div>    
+                    
+
+                    </div>
+                    <div class="panel-footer"></div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="panel embedding graph">
+                    <div class="column">
+                        
+                        <script>
+			
+                            // 获取元素内容
+                            function testSubmit(){
+                                console.log(document.getElementById('mds').checked);
+                                console.log(document.getElementById('tsne').checked);
+                                console.log(document.getElementById('select').value);
+                                chooseimg_face()
+                            }
+                            function chooseimg_face(){
+                                console.log('HI')
+                                var x=document.getElementById('select').value;
+                                var y=document.getElementById('mds').checked;
+                                var z=document.getElementById('tsne').checked;
+                                if(y==true){
+                                    if(x==1){
+                                      console.log('hi2')
+                                      displayChart1()
+                                    }else if(x==2){
+                                        displayChart2()
+                                    }else if(x==3){
+                                        displayChart3()
+                                    }else if(x==4){
+                                        displayChart4()
+                                    }else if(x==5){
+                                        displayChart5()
+                                    }else if(x==6){
+                                        displayChart6()
+                                    }else if(x==7){
+                                        displayChart7()
+                                    }else if(x==8){
+                                        displayChart8()
+                                    }else if(x==9){
+                                        displayChart9()
+                                    }else if(x==10){
+                                        displayChart10()
+                                    }
+                                    
+                                }else if(z==true){
+                                    if(x==1){
+                                        displayChart11()
+                                    }else if(x==2){
+                                        displayChart12()
+                                    }else if(x==3){
+                                        displayChart13()
+                                    }else if(x==4){
+                                        displayChart14()
+                                    }else if(x==5){
+                                        displayChart15()
+                                    }else if(x==6){
+                                        displayChart16()
+                                    }else if(x==7){
+                                        displayChart17()
+                                    }else if(x==8){
+                                        displayChart18()
+                                    }else if(x==9){
+                                        displayChart19()
+                                    }else if(x==10){
+                                        displayChart20()
+                                    }
+                                    
+                                }
+                                
+                            }
+                        </script>
+
+                        <form id="myform">
+                            <font size="3">
+                                Type:<br/>
+                                <input type='radio' name="embedding_graph_type" value="mds" checked="checked" id="mds"> <label for="mds">MDS </label><br/>
+                                <input type='radio' name="embedding_graph_type" value="tsne"  id="tsne"><label for="tsne"> t-SNE</label><br/>
+                                Data:<br/>
+                                <select id="select" name="data" >
+                                    <option selected="selected"  value="1">1-KA</option>
+                                    <option value="2">2-KL</option>
+                                    <option value="3">3-KM</option>
+                                    <option value="4">4-KR</option>
+                                    <option value="5">5-MK</option>
+                                    <option value="6">6-NA</option>
+                                    <option value="7">7-NM</option>
+                                    <option value="8">8-TM</option>
+                                    <option value="9">9-UY</option>
+                                    <option value="10">10-YM</option>
+                                </select><br/>
+                                <input type="reset" value="Reset"><br/>
+                            </font>
+                        </form>
+                        <button onClick=testSubmit()>Submit</button>
+                    </div>
+                    <div class="column">
+                        <h3>Embedding Graph</h3>
+                        <div class="chart"></div>
+                        <div class="panel-footer"></div>
+                    </div>
+                </div>
+                <div class="facial_information">
+                    <div class="column">
+                        <script>
+			
+                            // 获取元素内容
+                            function testSubmit3(){
+                                console.log(document.getElementById('bottleneck').checked);
+                                console.log(document.getElementById('wasserstein').checked);
+                                console.log(document.getElementById('select3').value);
+                                chooseimg_line()
+                                
+                            }
+                            function chooseimg_line(){
+                                console.log('HI')
+                                var x=document.getElementById('select3').value;
+                                var x1=document.getElementById('select4').value;
+                                var y=document.getElementById('bottleneck').checked;
+                                var z=document.getElementById('wasserstein').checked;
+                                var i=document.getElementById('emotion').checked;
+                                var j=document.getElementById('position').checked;
+                                if(y==true && i==true){
+                                    if(x==1){
+                                      console.log('hi2')
+                                      displayLine1()
+                                    }else if(x==2){
+                                        displayLine2()
+                                    }else if(x==3){
+                                        displayLine3()
+                                    }else if(x==4){
+                                        displayLine4()
+                                    }else if(x==5){
+                                        displayLine5()
+                                    }else if(x==6){
+                                        displayLine6()
+                                    }
+                                    
+                                }else if(z==true&& i==true){
+                                    if(x==1){
+                                      console.log('hi2')
+                                      displayLinew1()
+                                    }else if(x==2){
+                                        displayLinew2()
+                                    }else if(x==3){
+                                        displayLinew3()
+                                    }else if(x==4){
+                                        displayLinew4()
+                                    }else if(x==5){
+                                        displayLinew5()
+                                    }else if(x==6){
+                                        displayLinew6()
+                                    }
+                                    
+                                }else if(y==true&& j==true){
+                                    if(x1==1){
+                                      console.log('hi2')
+                                      displayLinepb1()
+                                    }else if(x1==2){
+                                        displayLinepb2()
+                                    }else if(x1==3){
+                                        displayLinepb3()
+                                    }else if(x1==4){
+                                        displayLinepb4()
+                                    }else if(x1==5){
+                                        displayLinepb5()
+                                    }else if(x1==6){
+                                        displayLinepb6()
+                                    }
+                                    
+                                }else if(z==true&& j==true){
+                                    if(x1==1){
+                                      console.log('hi2')
+                                      displayLinepw1()
+                                    }else if(x1==2){
+                                        displayLinepw2()
+                                    }else if(x1==3){
+                                        displayLinepw3()
+                                    }else if(x1==4){
+                                        displayLinepw4()
+                                    }else if(x1==5){
+                                        displayLinepw5()
+                                    }else if(x1==6){
+                                        displayLinepw6()
+                                    }
+                                    
+                                }
+                            
+                                
+                            }
+                        </script>
+
+                        <form id="myform3">
+                            <font size="2">
+                                Type:<br/>
+                                <input type='radio' name="line_type" value="bottleneck" checked="checked" id="bottleneck" > <label for="bottleneck" >Bottleneck </label><br/>
+                                <input type='radio' name="line_type" value="wasserstein"  id="wasserstein"><label for="wasserstein"  size="2"> Wasserstein</label><br/>
+                                <input type='radio' name="line_data" value="emotion"  id="emotion"><label for="emotion"  size="2"> Emotion:</label><br/>
+                                <select id="select3" name="emotion" >
+                                    <option selected="selected"  value="1">Angry</option>
+                                    <option value="2">Disgust</option>
+                                    <option value="3">Fear</option>
+                                    <option value="4">Happy</option>
+                                    <option value="5">Sad</option>
+                                    <option value="6">Surprise</option>
+                                </select>
+                                <input type='radio' name="line_data" value="position"  id="position"><label for="position"  size="2"> Position:</label><br/>
+                                <select id="select4" name="position" >
+                                    <option selected="selected"  value="1">Face</option>
+                                    <option value="2">Cheek</option>
+                                    <option value="3">Eyebrow</option>
+                                    <option value="4">Nose</option>
+                                    <option value="5">Eye</option>
+                                    <option value="6">Mouth</option>
+                                </select>
+                            </font>
+                        </form>
+                        <button onClick=testSubmit3()>Submit</button>
+                    </div>
+                    <div class="column">
+                        <h3>Facial Information Graph</h3>
+                        <div class="chart"></div>
+                        <div class="panel-footer"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="js\flexible.js"></script>
+        <script src="js\echarts.min.js"></script>
+        <script src="js\1.js"></script>
+        <script src="js\2.js"></script>
+        <script src="js\3.js"></script>
+        <script src="js\4.js"></script>
+        <script src="js\5.js"></script>
+        <script src="js\6.js"></script>
+        <script src="js\7.js"></script>
+        <script src="js\8.js"></script>
+        <script src="js\9.js"></script>
+        <script src="js\10.js"></script>
+        <script src="js\11.js"></script>
+        <script src="js\12.js"></script>
+        <script src="js\13.js"></script>
+        <script src="js\14.js"></script>
+        <script src="js\15.js"></script>
+        <script src="js\16.js"></script>
+        <script src="js\17.js"></script>
+        <script src="js\18.js"></script>
+        <script src="js\19.js"></script>
+        <script src="js\20.js"></script>
+        <script src="js\face_1.js"></script>
+        <script src="js\face_2.js"></script>
+        <script src="js\face_3.js"></script>
+        <script src="js\face_4.js"></script>
+        <script src="js\face_5.js"></script>
+        <script src="js\face_6.js"></script>
+        <script src="js\face_7.js"></script>
+        <script src="js\dgm_1.js"></script>
+        <script src="js\dgm_2.js"></script>
+        <script src="js\dgm_3.js"></script>
+        <script src="js\line_1.js"></script>
+        <script src="js\line_2.js"></script>
+        <script src="js\line_3.js"></script>
+        <script src="js\line_4.js"></script>
+        <script src="js\line_5.js"></script>
+        <script src="js\line_6.js"></script>
+        <script src="js\linew_1.js"></script>
+        <script src="js\linew_2.js"></script>
+        <script src="js\linew_3.js"></script>
+        <script src="js\linew_4.js"></script>
+        <script src="js\linew_5.js"></script>
+        <script src="js\linew_6.js"></script>
+        <script src="js\linepb_1.js"></script>
+        <script src="js\linepb_2.js"></script>
+        <script src="js\linepb_3.js"></script>
+        <script src="js\linepb_4.js"></script>
+        <script src="js\linepb_5.js"></script>
+        <script src="js\linepb_6.js"></script>
+        <script src="js\linepw_1.js"></script>
+        <script src="js\linepw_2.js"></script>
+        <script src="js\linepw_3.js"></script>
+        <script src="js\linepw_4.js"></script>
+        <script src="js\linepw_5.js"></script>
+        <script src="js\linepw_6.js"></script>
+        
+    </body>
+</html>
+
+
